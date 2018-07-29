@@ -1,5 +1,7 @@
-FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+FROM java:8-jre-alpine
+
+ENV APP_HOME "/opt/app"
+
+ADD build/libs/vrp-*.jar $APP_HOME/app.jar
+
+CMD	java -jar /opt/app/app.jar

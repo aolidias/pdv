@@ -1,1 +1,12 @@
 server.servlet.context-path: /vrp
+
+
+spring:
+  data:
+    mongodb:
+      database: ${MONGODB_DATABASE_NAME}
+      username: ${MONGODB_USERNAME}
+      password: ${MONGODB_USER_PASSWORD}
+      port: ${MONGODB_PORT}
+      host: ${MONGODB_HOST}
+      authentication-database: ${MONGODB_AUTH_DATABASE}
