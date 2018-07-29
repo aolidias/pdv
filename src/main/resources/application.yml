@@ -1,1 +1,1 @@
-server.context-path: /vrp
+server.servlet.context-path: /vrp
